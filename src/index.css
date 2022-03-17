@@ -1,0 +1,40 @@
+@import "~normalize.css";
+.container{
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.header{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.header__menu {
+	justify-self: end;
+	
+}
+.box{
+	position: relative;
+}
+.btn{
+position: absolute;
+bottom: 0;
+right: 0;
+} 
+
+.card{
+	display: flex;
+	justify-content: center;
+}
+.logo {
+	float: left;
+	width: 120px;
+	height: 31px;
+	margin: 16px 24px 16px 0;
+	background: rgba(255, 255, 255, 0.2);
+ }
+ .site-layout .site-layout-background {
+	background: #fff;
+ }
+ [data-theme="dark"] .site-layout .site-layout-background {
+	background: #141414;
+ }
