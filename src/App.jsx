@@ -2,7 +2,6 @@ import React from "react";
 import "antd/dist/antd.css";
 import "./index.css";
 import { Layout, Menu,  Row, Col, Pagination, } from "antd";
-//import { Card } from "antd";
 import { postData } from "../posts";
 import { useState } from "react";
 import { BoxCard } from "./components/BoxCard/index.jsx";
@@ -10,30 +9,20 @@ import {Title} from "./components/Title/index";
 
 const { Header, Content, Footer } = Layout;
 
-// import { Header } from "./components/Header";
-// import { Main } from "./components/Main";
-// import { Footer } from "./components/Footer";
+
 
 export const App = () => {
 	
-	//const [arr, setArr] = useState([])
 	const [rows, setRows] = useState([0, 9]);
-	//console.log(rows)
 
 	let res = [];
+
 	postData.map((elem, indx) => {
 		if (indx < rows[1] && indx >= rows[0]) {
 			res.push(elem);
 		}
 	});
 	
-	function func () {
-		
-		
-	}
-	
-	//console.log(postData);
-
 	return (
 		<div className="container">
 			<Layout style={{ width: "100%" }}>
@@ -58,7 +47,6 @@ export const App = () => {
 					<div className="site-layout-background" style={{ padding: 24, minHeight: 380 }} >
 						<Row gutter={[16, 24]} >
 							{res.map((item) => {
-								//console.log(item);
 								return (
 									<Col  key={item._id} className="gutter-row card" xs={24} md={12} lg={12} xl={8}>
 										<BoxCard {...item} />
@@ -86,4 +74,4 @@ export const App = () => {
 	);
 };
 
-//extra={<a href="#">More</a>}
+
